@@ -1,0 +1,27 @@
+.expanding {
+  @include flex;
+  gap: 20px;
+  &_item {
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    @include bg-reset;
+    height: 600px;
+    flex: 0.5;
+    border-radius: 40px;
+    transition: flex 0.5s ease-in;
+    cursor: pointer;
+
+    &.active {
+      flex: 5;
+      h2 {
+        opacity: 1;
+        transition: opacity 0.5s ease-in 0.5s;
+      }
+    }
+    h2 {
+      color: whitesmoke;
+      opacity: 0;
+    }
+  }
+}
